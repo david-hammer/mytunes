@@ -5,6 +5,7 @@ var SongQueue = Songs.extend({
   },
 
   playFirst: function() {
+
     if (this.length > 0){
       var model = this.at(0);
       model.play();
