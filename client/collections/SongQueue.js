@@ -2,6 +2,19 @@
 var SongQueue = Songs.extend({
 
   initialize: function(){
+  },
+
+  playFirst: function() {
+    if (this.length > 0){
+      var model = this.at(0);
+      model.play();
+    }
+  },
+  enqueue: function(song) {
+    // add song to collection
+    this.add(song);
+    //song.enqueue(); // tells song to trigger the enqueue signal
+
   }
 
 });
