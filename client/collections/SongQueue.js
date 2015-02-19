@@ -12,10 +12,18 @@ var SongQueue = Songs.extend({
     }
   },
   enqueue: function(song) {
+    console.log(song);
     // add song to collection
     this.add(song);
     //song.enqueue(); // tells song to trigger the enqueue signal
 
+  },
+  dequeue: function() {
+    if (this.length > 0){
+      var model = this.at(0);
+      model.dequeue();
+      return this.shift();
+    }
   }
 
 });
